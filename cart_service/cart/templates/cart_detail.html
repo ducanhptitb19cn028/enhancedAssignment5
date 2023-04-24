@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Cart</h1>
+  {% if books %}
+    <ul>
+    {% for book in books %}
+      <li>{{ book.title }} ({{ book.quantity }})</li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    <p>Your cart is empty.</p>
+  {% endif %}
+{% endblock %}
